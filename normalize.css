@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.background {
+  border-radius: 2em;
+  background-color: var(--white);
+  border: .1em solid var(--black);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+:root {
+  --red: #fa2f2f;
+  --orange: #fa9600;
+  --yellow: #fcdf21;
+  --green: #2da154;
+  --blue: #3561BB;
+  --purple: #9a3cc9;
+  --black: #000000;
+  --gray: #d6d6d6;
+  --white: #ffffff;
+}
