@@ -8,4 +8,9 @@ var words = [
   "rat",
   "sat",
   "vat"
-]
+];
+
+let answer = "";
+let guesses = [];
+let wrongGuess = 0;
+let maxWrongGuess = 6;
