@@ -12,5 +12,9 @@ var words = [
 
 let answer = "";
 let guesses = [];
-let wrongGuess = 0;
-let maxWrongGuess = 6;
+let wrong = 0;
+let maxWrong = 6;
+
+function pickWord() {
+  answer = words[Math.floor(Math.random() * words.length)];
+}
