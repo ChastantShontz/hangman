@@ -11,7 +11,7 @@ var words = [
 ];
 
 let answer = "";
-let guesses = [];
+let guessed = [];
 let wrong = 0;
 
 function pickWord() {
@@ -31,5 +31,12 @@ function createKeyboard() {
   document.getElementById("keyboard").innerHTML = buttons;
 }
 
+function wordGuess() {
+  wordGuess = answer.split("").map(letter =>
+    (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+  document.getElementById('unknownWord').innerHTML = wordGuess;
+}
+
 pickWord();
 createKeyboard();
+wordGuess();
