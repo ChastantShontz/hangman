@@ -1,4 +1,4 @@
-var words = [
+let words = [
   "bat",
   "man"
 ];
@@ -13,7 +13,7 @@ function pickWord() {
 
 function wordGuess() {
   chosenWord = answer.split("").map(letter =>
-    (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("");
+    (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join("").replace(/-/g, "&nbsp;");
   document.getElementById("unknownWord").innerHTML = chosenWord;
 }
 
@@ -33,7 +33,8 @@ function pickLetter(chosenLetter) {
 }
 
 function youWon() {
-  if (chosenWord == answer) {
+  let finalWord = chosenWord.replace(/&nbsp;/g, "-");
+  if (finalWord == answer) {
     alert("You won!");
     let disable = document.getElementsByClassName("letter");
     var rep;
