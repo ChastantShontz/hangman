@@ -32,3 +32,14 @@
 #instruct {
   text-align: center;
 }
+
+#keyboard {
+  text-align: center;
+}
+
+.letter {
+  margin-left: .1em;
+  margin-right: .1em;
+  margin-top: .25em;
+  margin-bottom: .25em;
+}

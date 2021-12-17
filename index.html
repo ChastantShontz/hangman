@@ -24,33 +24,43 @@
         <img src="img/hangman0.png" alt="No hangman" id="hangman">
         <h3 id="instruct">Guess the word!</h3>
         <p id="unknownWord"></p>
-        <button type="button" class="letter" id="a" onclick="pickLetter('a')">a</button>
-        <button type="button" class="letter" id="b" onclick="pickLetter('b')">b</button>
-        <button type="button" class="letter" id="c" onclick="pickLetter('c')">c</button>
-        <button type="button" class="letter" id="d" onclick="pickLetter('d')">d</button>
-        <button type="button" class="letter" id="e" onclick="pickLetter('e')">e</button>
-        <button type="button" class="letter" id="f" onclick="pickLetter('f')">f</button>
-        <button type="button" class="letter" id="g" onclick="pickLetter('g')">g</button>
-        <button type="button" class="letter" id="h" onclick="pickLetter('h')">h</button>
-        <button type="button" class="letter" id="i" onclick="pickLetter('i')">i</button>
-        <button type="button" class="letter" id="j" onclick="pickLetter('j')">j</button>
-        <button type="button" class="letter" id="k" onclick="pickLetter('k')">k</button>
-        <button type="button" class="letter" id="l" onclick="pickLetter('l')">l</button>
-        <button type="button" class="letter" id="m" onclick="pickLetter('m')">m</button>
-        <button type="button" class="letter" id="n" onclick="pickLetter('n')">n</button>
-        <button type="button" class="letter" id="o" onclick="pickLetter('o')">o</button>
-        <button type="button" class="letter" id="p" onclick="pickLetter('p')">p</button>
-        <button type="button" class="letter" id="q" onclick="pickLetter('q')">q</button>
-        <button type="button" class="letter" id="r" onclick="pickLetter('r')">r</button>
-        <button type="button" class="letter" id="s" onclick="pickLetter('s')">s</button>
-        <button type="button" class="letter" id="t" onclick="pickLetter('t')">t</button>
-        <button type="button" class="letter" id="u" onclick="pickLetter('u')">u</button>
-        <button type="button" class="letter" id="v" onclick="pickLetter('v')">v</button>
-        <button type="button" class="letter" id="w" onclick="pickLetter('w')">w</button>
-        <button type="button" class="letter" id="x" onclick="pickLetter('x')">x</button>
-        <button type="button" class="letter" id="y" onclick="pickLetter('y')">y</button>
-        <button type="button" class="letter" id="z" onclick="pickLetter('z')">z</button>
-        <button type="button" class="letter" id="-" onclick="pickLetter('-')">Space</button>
+        <div id="keyboard">
+          <div class="row1">
+            <button type="button" class="letter" id="q" onclick="pickLetter('q')">q</button>
+            <button type="button" class="letter" id="w" onclick="pickLetter('w')">w</button>
+            <button type="button" class="letter" id="e" onclick="pickLetter('e')">e</button>
+            <button type="button" class="letter" id="r" onclick="pickLetter('r')">r</button>
+            <button type="button" class="letter" id="t" onclick="pickLetter('t')">t</button>
+            <button type="button" class="letter" id="y" onclick="pickLetter('y')">y</button>
+            <button type="button" class="letter" id="u" onclick="pickLetter('u')">u</button>
+            <button type="button" class="letter" id="i" onclick="pickLetter('i')">i</button>
+            <button type="button" class="letter" id="o" onclick="pickLetter('o')">o</button>
+            <button type="button" class="letter" id="p" onclick="pickLetter('p')">p</button>
+          </div>
+          <div class="row2">
+            <button type="button" class="letter" id="a" onclick="pickLetter('a')">a</button>
+            <button type="button" class="letter" id="s" onclick="pickLetter('s')">s</button>
+            <button type="button" class="letter" id="d" onclick="pickLetter('d')">d</button>
+            <button type="button" class="letter" id="f" onclick="pickLetter('f')">f</button>
+            <button type="button" class="letter" id="g" onclick="pickLetter('g')">g</button>
+            <button type="button" class="letter" id="h" onclick="pickLetter('h')">h</button>
+            <button type="button" class="letter" id="j" onclick="pickLetter('j')">j</button>
+            <button type="button" class="letter" id="k" onclick="pickLetter('k')">k</button>
+            <button type="button" class="letter" id="l" onclick="pickLetter('l')">l</button>
+          </div>
+          <div class="row3">
+            <button type="button" class="letter" id="z" onclick="pickLetter('z')">z</button>
+            <button type="button" class="letter" id="x" onclick="pickLetter('x')">x</button>
+            <button type="button" class="letter" id="c" onclick="pickLetter('c')">c</button>
+            <button type="button" class="letter" id="v" onclick="pickLetter('v')">v</button>
+            <button type="button" class="letter" id="b" onclick="pickLetter('b')">b</button>
+            <button type="button" class="letter" id="n" onclick="pickLetter('n')">n</button>
+            <button type="button" class="letter" id="m" onclick="pickLetter('m')">m</button>
+          </div>
+          <div class="row4">
+            <button type="button" class="letter" id="-" onclick="pickLetter('-')">Space</button>
+          </div>
+        </div>
         <button type="reset" onclick="reset()">Reset</button>
       </article>
       <footer>
