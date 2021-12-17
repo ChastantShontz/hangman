@@ -45,7 +45,7 @@ function youWon() {
 
 function youLost() {
   if (wrong == 6) {
-    alert("You lost...the answer was " + answer);
+    alert("You lost...the answer was " + answer + ".");
     let disable = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < disable.length; rep++) {
@@ -65,6 +65,7 @@ function reset() {
   for (rep = 0; rep < enable.length; rep++) {
     enable[rep].removeAttribute("disabled");
   }
+  document.getElementById("hangman").src = "img/hangman0.png"
 }
 
 pickWord();
