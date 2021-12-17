@@ -9,3 +9,17 @@
 #wrongGuesses {
   float: right;
 }
+
+#guessedLettersCont {
+  float: right;
+  clear: right;
+  height: 4em;
+  width: 19em;
+  padding: .5em;
+  border: .1em solid var(--black);
+}
+
+#guessedLettersTitle {
+  margin-bottom: .5em;
+  text-align: center;
+}
