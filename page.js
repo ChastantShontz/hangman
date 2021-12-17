@@ -29,11 +29,12 @@ function pickLetter(chosenLetter) {
     document.getElementById("wrong").innerHTML = wrong;
     youLost();
   }
+  document.getElementById("hangman").src = "img/hangman" + wrong + ".png"
 }
 
 function youWon() {
   if (chosenWord == answer) {
-    alert("You Won!");
+    alert("You won!");
     let disable = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < disable.length; rep++) {
@@ -44,7 +45,7 @@ function youWon() {
 
 function youLost() {
   if (wrong == 6) {
-    alert("You Lost...");
+    alert("You lost...the answer was " + answer);
     let disable = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < disable.length; rep++) {
