@@ -2,10 +2,10 @@
   padding: 1em;
 }
 
-.title {
+#title {
   text-align: center;
 }
 
-.wrongGuesses {
-  text-align: right;
+#wrongGuesses {
+  float: right;
 }
