@@ -34,12 +34,22 @@ function pickLetter(chosenLetter) {
 function youWon() {
   if (chosenWord == answer) {
     alert("You Won!");
+    let disable = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < disable.length; rep++) {
+      disable[rep].disabled = true;
+    }
   }
 }
 
 function youLost() {
   if (wrong == 6) {
     alert("You Lost...");
+    let disable = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < disable.length; rep++) {
+      disable[rep].disabled = true;
+    }
   }
 }
 
