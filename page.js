@@ -1,13 +1,6 @@
 var words = [
   "bat",
-  "cat",
-  "fat",
-  "hat",
-  "mat",
-  "pat",
-  "rat",
-  "sat",
-  "vat"
+  "man"
 ];
 
 let answer = "";
@@ -18,25 +11,23 @@ function pickWord() {
   answer = words[Math.floor(Math.random() * words.length)];
 }
 
-function createKeyboard() {
-  let buttons = "abcdefghijklmnopqrstuvwxyz".split("").map(letter =>
-    `
-      <button
-        id="letter"
-        onClick="handleGuess("letter")"
-      >
-        ` + letter + `
-      </button>
-    `).join("");
-  document.getElementById("keyboard").innerHTML = buttons;
+function pickLetter(chosenLetter) {
+  guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
+  document.getElementById(chosenLetter).setAttribute('disabled', true);
+  if (answer.indexOf(chosenLetter) >= 0) {
+    wordGuess();
+    checkIfGameWon();
+  }
+  else if (answer.indexOf(chosenLetter) === -1) {
+    wrong++;
+  }
 }
 
 function wordGuess() {
-  wordGuess = answer.split("").map(letter =>
+  chosenWord = answer.split("").map(letter =>
     (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
-  document.getElementById('unknownWord').innerHTML = wordGuess;
+  document.getElementById('unknownWord').innerHTML = chosenWord;
 }
 
 pickWord();
-createKeyboard();
 wordGuess();
