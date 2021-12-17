@@ -21,6 +21,7 @@ function pickLetter(chosenLetter) {
   else if (answer.indexOf(chosenLetter) === -1) {
     wrong++;
     document.getElementById("wrong").innerHTML = wrong;
+    youLost();
   }
 }
 
@@ -33,6 +34,12 @@ function wordGuess() {
 function youWon() {
   if (chosenWord === answer) {
     alert("You Won!");
+  }
+}
+
+function youLost() {
+  if (wrong === 6) {
+    alert("You Lost...");
   }
 }
 
