@@ -132,5 +132,9 @@ function reset() {
   document.getElementById("cover").style.display = "none";
 }
 
+function hide() {
+  document.getElementById("cover").style.display = "none";
+}
+
 pickWord();
 wordGuess();
