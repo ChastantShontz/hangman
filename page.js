@@ -1,5 +1,32 @@
 let words = [
-  "marc-on-the-water"
+  "ali-boolani",
+  "aunt-peggy",
+  "beth",
+  "big-boi-ben",
+  "buddy-the-elf",
+  "celia",
+  "chaz",
+  "chestnut",
+  "daft-pika",
+  "dantes-inferno",
+  "david-moody",
+  "easton",
+  "girly",
+  "he-ryan",
+  "jasper-henderson",
+  "kalen",
+  "marc-on-the-water",
+  "mcspeeds",
+  "megglie",
+  "nolan-hamboerger",
+  "not-cindy",
+  "pete-supreme",
+  "sarnum",
+  "she-ryan",
+  "squidney",
+  "tlapa-sandwich",
+  "tom-robins-son",
+  "yung-grady"
 ];
 
 let answer = "";
@@ -58,7 +85,7 @@ function youWon() {
     for (rep = 0; rep < press.length; rep++) {
       press[rep].classList.remove("letterHover");
     }
-    document.getElementById("coverCont").style.display = "block";
+    document.getElementById("coverCont").style.display = "flex";
     document.getElementById("message").innerHTML = "You won!!!";
   }
 }
@@ -85,7 +112,7 @@ function youLost() {
     for (rep = 0; rep < press.length; rep++) {
       press[rep].classList.remove("letterHover");
     }
-    document.getElementById("coverCont").style.display = "block";
+    document.getElementById("coverCont").style.display = "flex";
     document.getElementById("message").innerHTML = "You lost...the answer was '" + answer.replace(/-/g, "&nbsp;") + "'";
   }
 }
