@@ -64,7 +64,6 @@ function pickLetter(chosenLetter) {
 function youWon() {
   let finalWord = chosenWord.replace(/&nbsp;/g, "-");
   if (finalWord == answer) {
-    alert("You won!");
     let disable = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < disable.length; rep++) {
@@ -80,12 +79,13 @@ function youWon() {
     for (rep = 0; rep < press.length; rep++) {
       press[rep].classList.remove("letterHover");
     }
+    document.getElementById("cover").style.display = "block";
+    document.getElementById("message").innerHTML = "You won!!!";
   }
 }
 
 function youLost() {
   if (wrong == 6) {
-    alert("You lost...the answer was " + answer + ".");
     let disable = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < disable.length; rep++) {
