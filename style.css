@@ -1,3 +1,5 @@
+/*Main Classes*/
+
 .background {
   padding: 1em;
 }
@@ -14,7 +16,6 @@
   padding: .5em;
   border: .1em solid var(--black);
   margin-right: 15%;
-  margin-top: 5%;
 }
 
 #guessedLettersTitle {
@@ -43,13 +44,13 @@
 }
 
 #unknownWord {
-  position: relative;
-  top: 2em;
   margin-left: 10%;
+  margin-top: .25em;
   font-size: 1.5em;
 }
 
 #instructions {
+  margin-top: .5em;
   margin-bottom: .5em;
   text-align: center;
 }
@@ -103,6 +104,8 @@
 #reset:active {
   transform: scale(.9);
 }
+
+/*JavaScript Added Classes*/
 
 #coverCont {
   display: none;
@@ -165,15 +168,25 @@
   padding-right: 1em;
   padding-top: .5em;
   padding-bottom: .5em;
-  border: .2em solid var(--blue);
-  color: var(--blue);
+  border: .2em solid var(--green);
+  color: var(--green);
   font-weight: bold;
 }
 
 #playAgain:hover {
-  background-color: rgba(53, 97, 187, 10%);
+  background-color: rgba(45, 161, 84, 10%);
 }
 
 #playAgain:active {
   transform: scale(.9);
+}
+
+/*Media Quaries*/
+
+@media screen and (min-width: 550px) and (max-width: 767px) {
+  #guessedLettersCont {float: none; margin-left: 10%; margin-bottom: .25em;}
+  #unknownWord {margin-left: 0; text-align: center;}
+}
+
+@media screen and (max-width: 549px) {
 }

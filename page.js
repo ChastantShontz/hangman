@@ -1,32 +1,5 @@
 let words = [
-  "ali-boolani",
-  "aunt-peggy",
-  "beth",
-  "big-boi-ben",
-  "buddy-the-elf",
-  "celia",
-  "chaz",
-  "chestnut",
-  "daft-pika",
-  "dantes-inferno",
-  "david-moody",
-  "easton",
-  "girly",
-  "he-ryan",
-  "jasper-henderson",
-  "kalen",
-  "marc-on-the-water",
-  "mcspeeds",
-  "megglie",
-  "nolan-hamboerger",
-  "not-cindy",
-  "pete-supreme",
-  "sarnum",
-  "she-ryan",
-  "squidney",
-  "tlapa-sandwich",
-  "tom-robins-son",
-  "yung-grady"
+  "marc-on-the-water"
 ];
 
 let answer = "";
