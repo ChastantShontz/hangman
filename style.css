@@ -75,6 +75,10 @@
   color: var(--blue);
 }
 
+.letter:active {
+  transform: scale(.9);
+}
+
 #reset {
   border-radius: 5em;
   background-color: var(--white);
@@ -90,4 +94,8 @@
 
 #reset:hover {
   background-color: rgba(250, 47, 47, 10%);
+}
+
+#reset:active {
+  transform: scale(.9);
 }
