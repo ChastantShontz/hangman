@@ -48,6 +48,7 @@ function pickLetter(chosenLetter) {
   document.getElementById("guessedLetters").innerHTML = guessed.join(", ").replace(/-/g, "space");
   document.getElementById(chosenLetter).disabled = true;
   document.getElementById(chosenLetter).style.opacity = "50%";
+  document.getElementById(chosenLetter).style.cursor = "default";
   document.getElementById(chosenLetter).classList.remove("letterHover");
   if (answer.indexOf(chosenLetter) >= 0) {
     wordGuess();
@@ -74,12 +75,17 @@ function youWon() {
     for (rep = 0; rep < transparent.length; rep++) {
       transparent[rep].style.opacity = "50%";
     }
+    let cursor = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < cursor.length; rep++) {
+      cursor[rep].style.cursor = "default";
+    }
     let press = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < press.length; rep++) {
       press[rep].classList.remove("letterHover");
     }
-    document.getElementById("cover").style.display = "block";
+    document.getElementById("coverCont").style.display = "block";
     document.getElementById("message").innerHTML = "You won!!!";
   }
 }
@@ -96,12 +102,17 @@ function youLost() {
     for (rep = 0; rep < transparent.length; rep++) {
       transparent[rep].style.opacity = "50%";
     }
+    let cursor = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < cursor.length; rep++) {
+      cursor[rep].style.cursor = "default";
+    }
     let press = document.getElementsByClassName("letter");
     var rep;
     for (rep = 0; rep < press.length; rep++) {
       press[rep].classList.remove("letterHover");
     }
-    document.getElementById("cover").style.display = "block";
+    document.getElementById("coverCont").style.display = "block";
     document.getElementById("message").innerHTML = "You lost...the answer was '" + answer.replace(/-/g, "&nbsp;") + "'";
   }
 }
@@ -123,17 +134,22 @@ function reset() {
   for (rep = 0; rep < transparent.length; rep++) {
     transparent[rep].style.opacity = "100%";
   }
+  let cursor = document.getElementsByClassName("letter");
+  var rep;
+  for (rep = 0; rep < cursor.length; rep++) {
+    cursor[rep].style.cursor = "pointer";
+  }
   let press = document.getElementsByClassName("letter");
   var rep;
   for (rep = 0; rep < press.length; rep++) {
     press[rep].classList.add("letterHover");
   }
   document.getElementById("hangman").src = "img/hangman0.png"
-  document.getElementById("cover").style.display = "none";
+  document.getElementById("coverCont").style.display = "none";
 }
 
 function hide() {
-  document.getElementById("cover").style.display = "none";
+  document.getElementById("coverCont").style.display = "none";
 }
 
 pickWord();
