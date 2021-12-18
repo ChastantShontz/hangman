@@ -70,12 +70,12 @@
   font-size: 1.1em;
 }
 
-.letter:hover {
+.letterHover:hover {
   background-color: var(--white);
   color: var(--blue);
 }
 
-.letter:active {
+.letterHover:active {
   transform: scale(.9);
 }
 

@@ -47,6 +47,8 @@ function pickLetter(chosenLetter) {
   guessed.indexOf(chosenLetter) == -1 ? guessed.push(chosenLetter) : null;
   document.getElementById("guessedLetters").innerHTML = guessed.join(", ").replace(/-/g, "space");
   document.getElementById(chosenLetter).disabled = true;
+  document.getElementById(chosenLetter).style.opacity = "50%";
+  document.getElementById(chosenLetter).classList.remove("letterHover");
   if (answer.indexOf(chosenLetter) >= 0) {
     wordGuess();
     youWon();
@@ -68,6 +70,16 @@ function youWon() {
     for (rep = 0; rep < disable.length; rep++) {
       disable[rep].disabled = true;
     }
+    let transparent = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < transparent.length; rep++) {
+      transparent[rep].style.opacity = "50%";
+    }
+    let press = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < press.length; rep++) {
+      press[rep].classList.remove("letterHover");
+    }
   }
 }
 
@@ -78,6 +90,16 @@ function youLost() {
     var rep;
     for (rep = 0; rep < disable.length; rep++) {
       disable[rep].disabled = true;
+    }
+    let transparent = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < transparent.length; rep++) {
+      transparent[rep].style.opacity = "50%";
+    }
+    let press = document.getElementsByClassName("letter");
+    var rep;
+    for (rep = 0; rep < press.length; rep++) {
+      press[rep].classList.remove("letterHover");
     }
   }
 }
@@ -93,6 +115,16 @@ function reset() {
   var rep;
   for (rep = 0; rep < enable.length; rep++) {
     enable[rep].removeAttribute("disabled");
+  }
+  let transparent = document.getElementsByClassName("letter");
+  var rep;
+  for (rep = 0; rep < transparent.length; rep++) {
+    transparent[rep].style.opacity = "100%";
+  }
+  let press = document.getElementsByClassName("letter");
+  var rep;
+  for (rep = 0; rep < press.length; rep++) {
+    press[rep].classList.add("letterHover");
   }
   document.getElementById("hangman").src = "img/hangman0.png"
 }
