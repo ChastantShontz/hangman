@@ -56,24 +56,38 @@
 
 .letter {
   border-radius: .25em;
-  padding-left: .5em;
-  padding-right: .5em;
-  padding-top: .25em;
-  padding-bottom: .25em;
-  border: none;
+  background-color: var(--blue);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border: .2em solid var(--blue);
   margin-left: .1em;
   margin-right: .1em;
   margin-top: .25em;
   margin-bottom: .25em;
+  color: var(--white);
   font-size: 1.1em;
 }
 
+.letter:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
 #reset {
-  border-radius: .5em;
+  border-radius: 5em;
+  background-color: var(--white);
   padding-left: 1em;
   padding-right: 1em;
   padding-top: .5em;
   padding-bottom: .5em;
-  border: none;
+  border: .2em solid var(--red);
   margin-top: 1em;
+  color: var(--red);
+  font-weight: bold;
+}
+
+#reset:hover {
+  background-color: rgba(250, 47, 47, 10%);
 }
