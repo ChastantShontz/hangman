@@ -3,33 +3,50 @@
 }
 
 #title {
+  font-size: 2em;
   text-align: center;
-}
-
-#wrongGuesses {
-  float: right;
 }
 
 #guessedLettersCont {
   float: right;
-  clear: right;
-  height: 4em;
-  width: 19em;
+  height: 5.5em;
+  width: 10em;
   padding: .5em;
   border: .1em solid var(--black);
+  margin-right: 15%;
+  margin-top: 5%;
 }
 
 #guessedLettersTitle {
-  margin-bottom: .5em;
   text-align: center;
+}
+
+#guessedLetters {
+  margin-top: .5em;
+  font-size: 1.1em;
+}
+
+#wrongGuesses {
+  margin-left: 10%;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 #hangman {
   height: 20em;
   width: 15em;
+  margin-left: 10%;
 }
 
-#instruct {
+#unknownWord {
+  position: relative;
+  top: 2em;
+  margin-left: 10%;
+  font-size: 1.5em;
+}
+
+#instructions {
+  margin-bottom: .5em;
   text-align: center;
 }
 
@@ -38,8 +55,25 @@
 }
 
 .letter {
+  border-radius: .25em;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  border: none;
   margin-left: .1em;
   margin-right: .1em;
   margin-top: .25em;
   margin-bottom: .25em;
+  font-size: 1.1em;
+}
+
+#reset {
+  border-radius: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border: none;
+  margin-top: 1em;
 }

@@ -45,7 +45,7 @@ function wordGuess() {
 
 function pickLetter(chosenLetter) {
   guessed.indexOf(chosenLetter) == -1 ? guessed.push(chosenLetter) : null;
-  document.getElementById("guessedLetters").innerHTML = guessed.join(", ").replace(/-/g, "[space]");
+  document.getElementById("guessedLetters").innerHTML = guessed.join(", ").replace(/-/g, "space");
   document.getElementById(chosenLetter).disabled = true;
   if (answer.indexOf(chosenLetter) >= 0) {
     wordGuess();
