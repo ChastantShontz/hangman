@@ -20,7 +20,7 @@
           <p id="guessedLettersTitle">Guessed Letters</p>
           <p id="guessedLetters"></p>
         </div>
-        <p id="wrongGuesses">Wrong Guesses: <strong><span id="wrong">0</span></strong> of <strong>6</strong></p>
+        <p id="wrongGuesses">Wrong Guesses: <span id="wrong">0</span> of <span id="maxWrong">6</span></p>
         <img src="img/hangman0.png" alt="No hangman" id="hangman">
         <p id="unknownWord"></p>
         <h3 id="instructions">Guess the word!</h3>
@@ -62,6 +62,13 @@
           </div>
           <div id="row5">
             <button type="reset" id="reset" onclick="reset()">Reset</button>
+          </div>
+        </div>
+        <div id="cover">
+          <div id="popUp">
+            <button type="reset" id="close">&times</button>
+            <h2 id="message"></h2>
+            <button type="reset" id="playAgain">Play Again?</button>
           </div>
         </div>
       </article>

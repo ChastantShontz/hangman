@@ -32,6 +32,10 @@
   margin-bottom: .5em;
 }
 
+#wrong, #maxWrong {
+  font-weight: bold;
+}
+
 #hangman {
   height: 20em;
   width: 15em;
@@ -97,5 +101,75 @@
 }
 
 #reset:active {
+  transform: scale(.9);
+}
+
+#cover {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 25%)
+}
+
+#popUp {
+  z-index: 2;
+  position: fixed;
+  left: 37.5%;
+  right: 37.5%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: .5em;
+  background-color: var(--white);
+  padding: 2em;
+  align-items: center;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: .33em;
+  background-color: var(--white);
+  padding-left: .25em;
+  padding-right: .25em;
+  border: none;
+  color: var(--red);
+  font-size: 1.5em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#close:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+#message {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#playAgain {
+  border-radius: 5em;
+  background-color: var(--white);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border: .2em solid var(--blue);
+  color: var(--blue);
+  font-weight: bold;
+}
+
+#playAgain:hover {
+  background-color: rgba(53, 97, 187, 10%);
+}
+
+#playAgain:active {
   transform: scale(.9);
 }
