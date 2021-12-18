@@ -101,6 +101,8 @@ function youLost() {
     for (rep = 0; rep < press.length; rep++) {
       press[rep].classList.remove("letterHover");
     }
+    document.getElementById("cover").style.display = "block";
+    document.getElementById("message").innerHTML = "You lost...the answer was '" + answer.replace(/-/g, "&nbsp;") + "'";
   }
 }
 
