@@ -129,6 +129,7 @@ function reset() {
     press[rep].classList.add("letterHover");
   }
   document.getElementById("hangman").src = "img/hangman0.png"
+  document.getElementById("cover").style.display = "none";
 }
 
 pickWord();
