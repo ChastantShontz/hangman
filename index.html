@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Chastant Shontz">
+    <meta name="description" content="Game of hangman">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="background">
+      <header>
+      </header>
+      <article>
+        <h1 id="title">Hangman</h1>
+        <p id="wrongGuesses">Wrong Guesses: <span id="wrong">0</span> of <span id="maxWrong">6</span></p>
+        <div id="guessedLettersCont">
+          <p id="guessedLettersTitle">Guessed Letters</p>
+          <p id="guessedLetters"></p>
+        </div>
+        <img src="img/hangman0.png" alt="No hangman" id="hangman">
+        <p id="unknownWord"></p>
+        <h3 id="instructions">Guess the word!</h3>
+        <div id="keyboard">
+          <div id="row1">
+            <button type="button" class="letter letterHover" id="q" onclick="pickLetter('q')">q</button>
+            <button type="button" class="letter letterHover" id="w" onclick="pickLetter('w')">w</button>
+            <button type="button" class="letter letterHover" id="e" onclick="pickLetter('e')">e</button>
+            <button type="button" class="letter letterHover" id="r" onclick="pickLetter('r')">r</button>
+            <button type="button" class="letter letterHover" id="t" onclick="pickLetter('t')">t</button>
+            <button type="button" class="letter letterHover" id="y" onclick="pickLetter('y')">y</button>
+            <button type="button" class="letter letterHover" id="u" onclick="pickLetter('u')">u</button>
+            <button type="button" class="letter letterHover" id="i" onclick="pickLetter('i')">i</button>
+            <button type="button" class="letter letterHover" id="o" onclick="pickLetter('o')">o</button>
+            <button type="button" class="letter letterHover" id="p" onclick="pickLetter('p')">p</button>
+          </div>
+          <div id="row2">
+            <button type="button" class="letter letterHover" id="a" onclick="pickLetter('a')">a</button>
+            <button type="button" class="letter letterHover" id="s" onclick="pickLetter('s')">s</button>
+            <button type="button" class="letter letterHover" id="d" onclick="pickLetter('d')">d</button>
+            <button type="button" class="letter letterHover" id="f" onclick="pickLetter('f')">f</button>
+            <button type="button" class="letter letterHover" id="g" onclick="pickLetter('g')">g</button>
+            <button type="button" class="letter letterHover" id="h" onclick="pickLetter('h')">h</button>
+            <button type="button" class="letter letterHover" id="j" onclick="pickLetter('j')">j</button>
+            <button type="button" class="letter letterHover" id="k" onclick="pickLetter('k')">k</button>
+            <button type="button" class="letter letterHover" id="l" onclick="pickLetter('l')">l</button>
+          </div>
+          <div id="row3">
+            <button type="button" class="letter letterHover" id="z" onclick="pickLetter('z')">z</button>
+            <button type="button" class="letter letterHover" id="x" onclick="pickLetter('x')">x</button>
+            <button type="button" class="letter letterHover" id="c" onclick="pickLetter('c')">c</button>
+            <button type="button" class="letter letterHover" id="v" onclick="pickLetter('v')">v</button>
+            <button type="button" class="letter letterHover" id="b" onclick="pickLetter('b')">b</button>
+            <button type="button" class="letter letterHover" id="n" onclick="pickLetter('n')">n</button>
+            <button type="button" class="letter letterHover" id="m" onclick="pickLetter('m')">m</button>
+          </div>
+          <div id="row4">
+            <button type="button" class="letter letterHover" id="-" onclick="pickLetter('-')">space</button>
+          </div>
+          <div id="row5">
+            <button type="reset" id="reset" onclick="reset()">Reset</button>
+          </div>
+        </div>
+        <div id="coverCont">
+          <div id="cover" onclick="hide()">
+          </div>
+          <div id="popUp">
+            <button type="reset" id="close" onclick="hide()">&times</button>
+            <h2 id="message"></h2>
+            <button type="reset" id="playAgain" onclick="reset()">Play Again?</button>
+          </div>
+        </div>
+      </article>
+      <footer>
+      </footer>
+    </div>
+    <script type="text/javascript" src="page.js"></script>
+  </body>
+</html>

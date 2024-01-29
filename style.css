@@ -1,0 +1,196 @@
+/*Main Classes*/
+
+.background {
+  padding: 1em;
+}
+
+#title {
+  font-size: 2em;
+  text-align: center;
+}
+
+#guessedLettersCont {
+  float: right;
+  height: 5.5em;
+  width: 10em;
+  padding: .5em;
+  border: .1em solid var(--black);
+  margin-right: 15%;
+}
+
+#guessedLettersTitle {
+  text-align: center;
+}
+
+#guessedLetters {
+  margin-top: .5em;
+  font-size: 1.1em;
+}
+
+#wrongGuesses {
+  margin-left: 10%;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+#wrong, #maxWrong {
+  font-weight: bold;
+}
+
+#hangman {
+  height: 20em;
+  width: 15em;
+  margin-left: 10%;
+}
+
+#unknownWord {
+  margin-left: 10%;
+  margin-top: .25em;
+  font-size: 1.5em;
+}
+
+#instructions {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+#keyboard {
+  text-align: center;
+}
+
+.letter {
+  border-radius: .25em;
+  background-color: var(--blue);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border: .2em solid var(--blue);
+  margin-left: .1em;
+  margin-right: .1em;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  color: var(--white);
+  font-size: 1.1em;
+}
+
+.letterHover:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.letterHover:active {
+  transform: scale(.9);
+}
+
+#reset {
+  border-radius: 5em;
+  background-color: var(--white);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border: .2em solid var(--red);
+  margin-top: 1em;
+  color: var(--red);
+  font-weight: bold;
+}
+
+#reset:hover {
+  background-color: rgba(250, 47, 47, 10%);
+}
+
+#reset:active {
+  transform: scale(.9);
+}
+
+/*JavaScript Added Classes*/
+
+#coverCont {
+  display: none;
+  justify-content: center;
+}
+
+#cover {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 25%)
+}
+
+#popUp {
+  z-index: 2;
+  position: fixed;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: .5em;
+  background-color: var(--white);
+  width: 25em;
+  max-width: 75%;
+  padding: 2em;
+  align-items: center;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: .33em;
+  background-color: var(--white);
+  padding-left: .25em;
+  padding-right: .25em;
+  border: none;
+  color: var(--red);
+  font-size: 1.5em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#close:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+#message {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+#playAgain {
+  border-radius: 5em;
+  background-color: var(--white);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border: .2em solid var(--green);
+  color: var(--green);
+  font-weight: bold;
+}
+
+#playAgain:hover {
+  background-color: rgba(45, 161, 84, 10%);
+}
+
+#playAgain:active {
+  transform: scale(.9);
+}
+
+/*Media Quaries*/
+
+@media screen and (min-width: 550px) and (max-width: 767px) {
+  #guessedLettersCont {float: none; margin-left: 10%; margin-bottom: .25em;}
+  #unknownWord {margin-left: 0; text-align: center;}
+}
+
+@media screen and (max-width: 549px) {
+  #guessedLettersCont {float: none; margin-left: 10%; margin-bottom: .25em;}
+  #unknownWord {margin-left: 0; font-size: 1.25em; text-align: center;}
+  .letter {font-size: 1em;}
+}
